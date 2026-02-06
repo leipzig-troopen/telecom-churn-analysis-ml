@@ -8,7 +8,6 @@ The repository is organized into a modular architecture to ensure scalability an
 - `data/`: Contains raw and processed datasets.
 - `notebooks/`: Jupyter notebooks for EDA and experimental modeling.
 - `src/`: Core logic including data preprocessing, visualization, and model training scripts.
-- `models/`: Serialized versions of the optimized models.
 - `requirements.txt`: List of dependencies required to run the environment.
 
 ## Methodology
