@@ -1,0 +1,15 @@
+# Data Manipulation
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+xgboost
+
+# Interpretation & Visualization
+shap
+matplotlib
+seaborn
+
+# Environment Management
+ipykernel
