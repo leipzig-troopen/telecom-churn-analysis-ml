@@ -34,7 +34,7 @@ Utilized SHapley Additive exPlanations to provide transparency into model decisi
 | :--- | :---: | :---: | :---: |
 | **Optimized XGBoost** | **0.82** | 0.62 | **0.844** |
 | Optimized Random Forest | 0.76 | 0.63 | 0.844 |
-| Logistic Regression | 0.55 | 0.60 | 0.843 |
+| Logistic Regression | 0.55 | 0.59 | 0.839 |
 
 
 
