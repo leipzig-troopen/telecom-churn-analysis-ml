@@ -56,19 +56,9 @@ def plot_categorical_features(df, features):
     
 def plot_correlation_heatmap(df, numerical_features):
     """Plot correlation heatmap between numerical features."""
-    plt.figure(figsize=(8, 4))
-    sns.heatmap(df[numerical_features].corr(), annot=True, cmap='RdBu', fmt='.2f')
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(df[numerical_features].corr(), annot=True, cmap='coolwarm', fmt='.2f')
     plt.title('Numerical Features Correlation Heatmap')
-    plt.show()
-
-def plot_outliers(df, numerical_features):
-    """Plot boxplot to detect outliers in numerical features."""
-    plt.figure(figsize=(15, 5))
-    for i, feature in enumerate(numerical_features, 1):
-        plt.subplot(1, len(numerical_features), i)
-        sns.boxplot(y=df[feature])
-        plt.title(f'Outliers in {feature}')
-    plt.tight_layout()
     plt.show()
 
 def plot_confusion_matrix(y_test, y_pred, model_name):

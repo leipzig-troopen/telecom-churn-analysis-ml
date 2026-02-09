@@ -28,12 +28,24 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     # Convert TotalCharges to numeric (some rows may be blank strings)
     if 'TotalCharges' in df_clean.columns:
         df_clean['TotalCharges'] = pd.to_numeric(df_clean['TotalCharges'], errors='coerce')
-        # Fill missing TotalCharges with median 
-        median_tc = df_clean['TotalCharges'].median()
-        df_clean['TotalCharges'] = df_clean['TotalCharges'].fillna(median_tc)
 
     print(f"[CLEANING] Done. Data now has {df_clean.shape[1]} columns.")
     return df_clean
+
+def impute_missing_values(df: pd.DataFrame, fill_value: float = None) -> Tuple[pd.DataFrame, float]:
+    """
+    Impute missing values in TotalCharges.
+    If fill_value is None, calculates median from the dataframe (Training mode).
+    If fill_value is provided, uses it (Inference/Test mode).
+    """
+    df_imputed = df.copy()
+    if 'TotalCharges' in df_imputed.columns:
+        if fill_value is None:
+            fill_value = df_imputed['TotalCharges'].median()
+        
+        df_imputed['TotalCharges'] = df_imputed['TotalCharges'].fillna(fill_value)
+    
+    return df_imputed, fill_value
 
 
 def label_encode(df: pd.DataFrame, categorical_cols: list, encoders=None):

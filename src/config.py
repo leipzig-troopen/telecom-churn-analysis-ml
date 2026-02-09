@@ -17,13 +17,18 @@ NUMERICAL_COLS = ["tenure", "MonthlyCharges", "TotalCharges"]
 
 # Categorical columns (to be encoded)
 CATEGORICAL_COLS = [
-    "gender", "SeniorCitizen", "Partner", "Dependents", 
-    "PhoneService", "MultipleLines", "InternetService",
+    "gender", "SeniorCitizen", "Partner", "Dependents","PhoneService" ,"MultipleLines", "InternetService",
     "OnlineSecurity", "OnlineBackup", "DeviceProtection", 
     "TechSupport", "StreamingTV", "StreamingMovies", 
     "Contract", "PaperlessBilling", "PaymentMethod", "Churn"
 ]
 
+CATEGORICAL_COLS_TARGET = [
+    "SeniorCitizen", "Partner", "Dependents", "MultipleLines", "InternetService",
+    "OnlineSecurity", "OnlineBackup", "DeviceProtection", 
+    "TechSupport", "StreamingTV", "StreamingMovies", 
+    "Contract", "PaperlessBilling", "PaymentMethod"
+]
 
 # ==========================================
 # MODEL SETTINGS
