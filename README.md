@@ -18,8 +18,8 @@ The repository is organized into a modular architecture to ensure scalability an
 
 ### 2. Modeling & Strategy
 - **Baseline**: Logistic Regression used to establish a linear performance floor.
-- **Candidate Models**: Random Forest and XGBoost selected for their ability to handle non-linear relationships.
-- **Optimization**: Conducted exhaustive Hyperparameter Tuning via `GridSearchCV`. 
+- **Candidate Models**: Random Forest, LightGBM, and XGBoost selected for their ability to handle non-linear relationships.
+- **Optimization**: Conducted exhaustive Hyperparameter Tuning via `RandomizedSearchCV`. 
 - **Imbalance Handling**: Utilized `scale_pos_weight` and `class_weight` to prioritize Recall over standard Accuracy.
 
 ### 3. Model Interpretation (SHAP)
@@ -30,11 +30,13 @@ Utilized SHapley Additive exPlanations to provide transparency into model decisi
 
 ## Results
 
-| Model | Recall (Churn) | F1-Score | AUC-ROC |
+| Model | Recall (Churn) | F1-Score (Churn) | AUC-ROC |
 | :--- | :---: | :---: | :---: |
-| **Optimized XGBoost** | **0.82** | 0.62 | **0.844** |
-| Optimized Random Forest | 0.76 | 0.63 | 0.844 |
+| **Optimized XGBoost** | **0.80** | 0.62 | **0.846** |
+| Optimized LightGBM | 0.77 | 0.63 | 0.842 |
+| Optimized Random Forest | 0.76 | 0.64 | 0.845 |
 | Logistic Regression | 0.55 | 0.59 | 0.839 |
+
 
 
 

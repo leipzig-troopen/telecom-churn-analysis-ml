@@ -5,6 +5,7 @@ numpy
 # Machine Learning
 scikit-learn
 xgboost
+lightgbm
 
 # Interpretation & Visualization
 shap
