@@ -22,7 +22,7 @@ def plot_churn_distribution(df):
     plt.ylim(0, 110)
 
     for container in ax.containers:
-        ax.bar_label(container, fmt='%.1f%%', padding=3, fontsize=11, fontweight='bold')
+        ax.bar_label(container, fmt='%.1f%%', padding=3, fontsize=11, fontweight='bold') #type: ignore
     plt.show()
 
 def plot_numerical_features(df, features):

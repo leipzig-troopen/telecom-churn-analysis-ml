@@ -9,8 +9,10 @@ from src.model_trainer import (
     log_reg_model,
     random_forest_model,
     xgboost_model,
+    lightgbm_model,
     train_xgb_tuned,
     train_rf_tuned,
+    train_lgbm_tuned,
     evaluate_model
 )
 
@@ -56,7 +58,8 @@ def main(data_path):
     models = {
         "Logistic Regression": log_reg_model,
         "Random Forest": random_forest_model,
-        "XGBoost": xgboost_model
+        "XGBoost": xgboost_model,
+        "LightGBM": lightgbm_model
     }
 
     for name, model_func in models.items():
@@ -67,7 +70,8 @@ def main(data_path):
 
     models_tune = {
         "Random Forest": train_rf_tuned,
-        "XGBoost": train_xgb_tuned
+        "XGBoost": train_xgb_tuned,
+        "LightGBM": train_lgbm_tuned,
     }
 
     for name, model_func in models_tune.items():
